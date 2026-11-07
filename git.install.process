@@ -18,9 +18,13 @@ Commands-
 
 # Same process for Singapore- Then create Github account & Login
 
+----------------------------------------------------------------------------------------------------------------
+
 
 * How to add, commit in Local Repo, How to push code and pull code from GitHub?
 
+
+[MUMBAI EC2 INSTANCE]
 
 1. Login into mumbai instance
 2. Create a Directory and go inside it
@@ -99,4 +103,28 @@ Commands-
 # Then you should pull & push the code in Local Repo to Central Repo daily {Mumbai-Git = Singapore-Git}
 
 
+
+----------------------------------------------------------------------------------------------------------------------
+[SINGAPORE EC2 INSTANCE]
+
+* Now go to Singapore EC2 Create one Directory and go inside it.
+
+
+Commands-
+
+
+- git init
+- git remote add origin <github cetral repo URL>
+- git pull origin master
+- git log
+- git show <commit-id>
+
+* Now add some code in the pull file
+
+- git status
+- git add .
+- git commit -m "Singapore Update1"
+- git status
+- git log
+- git push origin master
 
