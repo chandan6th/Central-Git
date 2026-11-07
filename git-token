@@ -1,0 +1,33 @@
+
+* Authentication: GitHub no longer accepts account passwords on the command line. When asked, use a Personal Access Token
+
+
+* Personal Access Token (PAT)
+
+Use this if you don’t want to install anything extra. The token acts as your password.
+
+1. Log in to github.com, click your profile picture (top right) → Settings.
+
+2. Scroll down the left sidebar and click Developer settings.
+
+3. Click Personal access tokens → Tokens (classic).
+
+4. Click Generate new token → Generate new token (classic).
+
+5. Fill in:
+
+> Note: something like my-laptop
+> Expiration: choose a duration (30 or 90 days is fine)
+> Scopes: tick repo
+
+6. Click Generate token at the bottom.
+
+7. Copy the token immediately. GitHub shows it only once. Save it somewhere safe, like a password manager.
+
+8. Run git push. When asked:
+
+Username: your GitHub username
+Password: paste the token (not your account password). The terminal won’t show characters as you paste, which is normal.
+
+
+

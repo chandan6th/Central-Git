@@ -1,0 +1,102 @@
+
+* How to use Git and create GitHub account?
+
+1. Create 2 Ec2 instances:- (a) Mumbai.git (b) Singapore.git = Security group - SSH, HTTP {Allow both}
+2. Then Login in mumbai instance using Putty or MobaXterm
+
+Commands-
+
+
+- Sudo su
+- yum update -y
+- yum install git -y          (which git)
+- git --version
+- git config --global user.name "user-name"
+- git config --global user.email "user-emali-id"
+- git config --list           (It will display user-name & mail-id)
+
+
+# Same process for Singapore- Then create Github account & Login
+
+
+* How to add, commit in Local Repo, How to push code and pull code from GitHub?
+
+
+1. Login into mumbai instance
+2. Create a Directory and go inside it
+
+Commands-
+
+
+- git init                    (Directory convert into local repo)
+- touch <file-name>           (put some data in this file)
+- git add .                   (. means if anything in the file then add the all)
+- git commit -m "my 1st commit from mumbai.git"
+- git status
+- git log                     (it tells you who's commit/ which user commit this)
+- git show <commit-id>        (it will dispaly all codes that you have written)
+- git remote add origin <Central Git URL>
+- git push -u origin master
+  (Enter Username & Password)
+
+
+#NOTE:-  If the password not working do this process --
+
+* Authentication: GitHub no longer accepts account passwords on the command line. When asked, use a Personal Access Token
+* Personal Access Token (PAT)
+
+Use this if you don’t want to install anything extra. The token acts as your password.
+
+1. Log in to github.com, click your profile picture (top right) → Settings.
+2. Scroll down the left sidebar and click Developer settings.
+3. Click Personal access tokens → Tokens (classic).
+4. Click Generate new token → Generate new token (classic).
+5. Fill in:
+
+> Note: something like my-laptop
+> Expiration: choose a duration (30 or 90 days is fine)
+> Scopes: tick repo
+
+6. Click Generate token at the bottom.
+7. Copy the token immediately. GitHub shows it only once. Save it somewhere safe, like a password manager.
+8. Run git push. When asked:
+
+Username: your GitHub username
+Password: paste the token (not your account password). The terminal won’t show characters as you paste, which is normal.
+
+
+
+#*#->  NOW GO TO SINGAPORE EC2 INSTANCE CREATE ONE DIRECTORY AND GO INSIDE IT----
+
+
+Commands-
+
+- git init
+- git remote add origin <GitHub Repo URL>
+- git pull -u origin master
+- git log
+- git pull origin master                (Now you can see- it pull all the code )
+- git show <commit-id>
+
+# Now add some data/code in the file
+
+- git status
+- git add .
+- git commit -m "Singapore Update1"
+- git status
+- git log
+- git push origin master
+
+# Now go to mumbai ec2 instance
+
+- git log
+- git pull origin master
+- git log
+- git show <commit-id>-
+
+
+# Now add some code in the file then push the code to central repo
+# Then you should pull & push the code in Local Repo to Central Repo daily {Mumbai-Git = Singapore-Git}
+
+
+
