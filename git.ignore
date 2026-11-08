@@ -1,0 +1,29 @@
+
+* To ignore some file while commiting.
+* Create one hidden file ".gitignore" and enter file format which you want to ignore.
+
+Ex:-    vi .gitignore
+enter-  *.css
+        *.java   ---------> (*) means ignore .java file
+
+
+- git add .gitignore
+- git commit -m "latest update ignore .java"
+- git status
+
+# Create some file= Ex:- touch file1.txt file2.txt file3.java file4.css
+
+- ls
+- git status
+- git commit -m "my text files only"
+
+
+-----------------------------------------------
+# Ipmortant to remember-
+
+- git log -1       (It display the latest commit updates)
+- git log -2       (It dispaly the last 2 updates)
+- git log --oneline         (It will display all updates in oneline)
+- git log --grep "ignore"   (it will display a specific word in git log) (Find the commit-id in specific word)
+
+
