@@ -69,6 +69,7 @@ Username: your GitHub username
 Password: paste the token (not your account password). The terminal won’t show characters as you paste, which is normal.
 
 
+--------------------------------------------------------------------------------------------------------------
 
 #*#->  NOW GO TO SINGAPORE EC2 INSTANCE CREATE ONE DIRECTORY AND GO INSIDE IT----
 
@@ -127,4 +128,21 @@ Commands-
 - git status
 - git log
 - git push origin master
+
+---------------------------------------------------------------------------------------------------------------------
+[MUMBAI INSTANCE]
+
+* Now go to Mumbai Ec2 instance
+
+Commands-
+
+- git log
+- git pull origin master
+- git log
+- git show <commit-id>
+
+
+* Now add some code in the file then push the code to central repo
+* then you should pull & push the code in local repo to central repo daily. {Mumbai-Git = Singapore-Git}
+
 
