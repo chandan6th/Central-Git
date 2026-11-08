@@ -1,0 +1,19 @@
+
+* How to create branch, merge branches, stash & git reset?
+
+{Branch}
+
+Commands-
+
+- git branch                                   (To see list of available branches)
+- git branch <New branch name>                 (Create a new branch)
+- git checkout <name of branch you want to go> (To switch branch)
+- git branch -d                                (Delete a branch)
+- git branch -D                                (Delete a branch)
+
+# The "-d" option will delete the branch only, If it has already pushed or merged with remote branch.
+# Use "-D" if you want t force to deleted, If it has not pushed or merged yet.
+
+--------------------------------------------------------------------------------------------------
+
+
