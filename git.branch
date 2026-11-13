@@ -16,4 +16,86 @@ Commands-
 
 --------------------------------------------------------------------------------------------------
 
+{Merge}
+
+
+* You can't merge branches of diff Repo             [mumbai.git <---MERGE---> mumbai.git]
+* We use pulling mechanism to merge branches        [mumbai.git <---can't MERGE---> singapore.git]
+
+
+Commands-
+
+- git merge <branch name>     (To merge the branch)
+- git log                     (To verify the merge)
+- git push origin master      (To push to central repo like github)
+
+
+-----------------------------------------------------------------------------------------------------
+
+{Conflict}
+
+* When same name file having different content in different branches, if you do merge, conflict occurs. (Resolve conflict then Add & Commit)
+* Conflict occurs when you merge Branches.
+
+#Ex:-
+
+
+    MASTER                         Branch1                                |         Master                                  Branch
+    ------                         -------                                          ------                                  ------
+    File1                          File2                                  |         File1                                   File2
+
+ - My name is chandan        - My name is chandan                         |   - My name is chandan		      - I am a trainer
+                             - I am a trainer
+
+     <------ Merge Successful --------->                                  |           <----------- CONFLICT Occours ------------->
+                                                                          | 
+									  |   * When file1 & file2 have completely different then conflict occurs.
+
+
+---------------------------------------------------------------------------------------------------
+
+{Git Stash}
+
+* Suppose you are implementing a new feature for your product. Your code is in progress and Suddenly a customer escalation comes, Because of this, You have to keep aside your new featire work for few hours.
+* To stash an item (only applies to modified files not new files) 
+
+
+Commands-
+
+
+- git stash                                                                  (To stash an item)
+- git stash list                                                             (To see stashed items list)
+- git stash apply stash@{0}   #---> {0} <--- latest stashed file             (To apply stashed items)
+                                    {1}
+                                    {2}
+                                    {3}
+
+
+
+* Then you can add & commit
+
+
+- git stash clear                                                            (To clear the stash items)
+
+
+---------------------------------------------------------------------------------------------------------------
+
+{Git Reset}
+
+
+* Git reset is a powerful command that is used to undo local changes to the state of a git repo. (Delete all the code from the staging are)
+
+* To reset staging area ---->  # git reset <File-name>
+                               
+                               # git reset .       ( . --> Means If anything in the file then Reset or Remove all)
+
+
+
+* To reset the changes from both staging area and working directory at a time --->  # git reset --hard
+                                                              
+                                                                                   (Delete the code from both Staging area and Working directory)
+
+
+
+
 
