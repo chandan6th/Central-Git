@@ -1,0 +1,74 @@
+
+* What is git revert, remove untracked files, What is tag, GitHub Clone?
+
+
+{Git Revert}
+
+
+* The revert command helps you undo an existing commit.
+ 
+
+    * Reset  --->  Before Commit   (It means Git reset working before you commit, means Git reset remove changes from the staging area before committing)
+    
+    * Revert --->  After Commit    (It means Git revert working after you commit, means The revert command helps you undo an existing commit)
+
+
+Commands-
+
+- sudo su
+- cd mumbai.git
+- ls
+- git status
+- cat >newfile    ----> Create a new file and add some code in this file
+- git add .
+- git commit -m "code"
+- git log --oneline
+- git revert <commit-id>
+
+
+--------------------------------------------------------------------------------------------------------
+
+* How to remove Untracked files?
+
+
+ - git clean -n     (Dry run)  (Ask to delete YES or NO)
+
+ - git clean -f     (Forcefully)  (It doesn't ASK)
+
+
+----------------------------------------------------------------------------------------------------
+
+{Tags}
+
+
+* Tag operatins allows giving meaningful names to a specific version in the Repository
+
+
+Commands-
+
+
+ - git tag -a <tag-name> -m <message> <commit-id>   (To apply Tag)
+
+ - git tag    (To see the list of tags)
+
+ - git how <tag-name>     (To see the particular commit content by using tag)
+
+ - git tag -d <tag-name>  (To delete a tag)
+
+
+
+---------------------------------------------------------------------------------------------------
+
+
+{GitHub Clone}
+
+
+- Open GitHub website
+- Login and choose existing Repo
+- now, Go to your Linux machine and run command   ---->  git clone <URL of GitHub Repo>
+
+
+# Its creates a local repo automatically in linux machine with the same name as in Github account
+
+
+
